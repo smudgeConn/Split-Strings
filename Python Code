@@ -1,0 +1,19 @@
+def solution(s):
+    list = []
+    for i in range(len(s)):
+        if i % 2 == 0 and len(s) % 2 == 0:
+            tuple = [s[i] + s[i+1]]
+            list.extend(tuple)
+            i+1
+        elif i % 2 == 1 and len(s) % 2 == 0:
+            continue
+        else:
+            if i % 2 == 0 and len(s) % 2 == 1 and i != len(s)-1:
+                tuple = [s[i] + s[i+1]]
+                list.extend(tuple)
+                i+1
+            elif i % 2 == 0 and len(s) % 2 == 1 and i == len(s)-1:
+                tuple = [s[i] + '_']
+                list.extend(tuple)
+    return list
+    pass
